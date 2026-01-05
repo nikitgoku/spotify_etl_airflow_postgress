@@ -2,7 +2,7 @@
 
 ![image](https://github.com/nikitgoku/spotify_etl_airflow_postgress/assets/114753615/acf3fefb-cc7c-4b35-a88e-80d60ea33c03)
 
-This project consists of a data pipeline which extracts Spotify data using the Spotify Web API to store it as .csv file which is then uploaded to Amazon S3. The most recent file is then extracted from S3 and ingested into and RDS, and for that PostgreSQL is ran locally. Airflow with Docker is used to orchestrate the data pipeling where DAGs are used. This project is to be extended to include PowerBI to have a visual dashboard of the data.
+This project consists of a data pipeline which extracts Spotify data using the Spotify Web API to stores the data in a .csv file (on a local system for staging) which is then uploaded to Amazon S3. The file is then extracted from S3 and ingested into relational database (PostgreSQL database) running locally. Airflow is used to orchestrate the data pipeline. The data is then analysed to gain insights using Amazon QuickSight.
 
 ## **Extraction**
 [Spotify Web API](https://developer.spotify.com/documentation/web-api) for the extraction of data, which enables the creation of applications that can interact with Spotify's streaming service, such as retrieving content metadata, getting recommendations, creating and managing playlists, or controlling playback, for our case getting recently played songs.
